@@ -1,0 +1,34 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-size: 100%;
+    list-style-type: none;
+    background: linear-gradient(to bottom, #2703A5, #A0F1F2);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+body #root > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+@media (min-width: 1200px) {
+    body {
+        background: linear-gradient(to left, #2703A5, #A0F1F2);
+    }
+}

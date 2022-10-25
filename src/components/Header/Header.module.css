@@ -1,0 +1,98 @@
+.mainHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.menuMobile {
+    background-color: #fff;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menuMobileTitle a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuIcon img {
+    width: 30px;
+    display: block;
+    object-fit: cover;
+}
+
+.menuContentMobile {
+    width: max-content;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 6px;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    z-index: 10;
+    transition: 200ms;
+    opacity: 0;
+    position: absolute;
+    right: 1rem;
+    bottom: -120px;
+    pointer-events: none;
+    box-shadow: 1px 3px 4px 1px rgba(0,0,0,0.2);
+}
+
+.menuContentMobileActive {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.menuContentMobile::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 30px;
+    top: -6px;
+    z-index: 10;
+    border-radius: 4px;
+}
+
+.menuContentMobile a {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-family: "Lexend Deca";
+    color: #1C0259;
+}
+
+@media (min-width: 1200px) {
+    .menuMobile {
+        display: none;
+    }
+}
+
+.menuDesktop {
+
+}

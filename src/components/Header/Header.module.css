@@ -87,7 +87,6 @@
     font-weight: 500;
     text-transform: uppercase;
     margin-top: 10px;
-    font-family: "Lexend Deca";
     color: #1C0259;
 }
 
@@ -228,7 +227,6 @@
     color: #fff;
     font-weight: 300;
     font-size: 20px;
-    font-family: "Lexend Deca";
 }
 
 @media (min-width: 1200px) {

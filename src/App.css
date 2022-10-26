@@ -13,6 +13,7 @@ body{
     background: linear-gradient(to bottom, #2703A5, #A0F1F2);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: "Lexend Deca";
 }
 
 html, body, #root {

@@ -31,22 +31,22 @@ export default function Header() {
 
             <div className={`${styles.menuContentMobile} ${menu && styles.menuContentMobileActive}`}>
                 <div className={styles.menuContentMobileLinks}>
-                    <Link to={"/"}>
+                    <Link to={"/registers"}>
                         <img src={registers} alt="Meus Relatórios" />
                         Meus relatórios
                     </Link>
-                    <Link to={"/"}>
+                    <Link to={"/config"}>
                         <img src={config} alt="Configurações" />
                         Configurações
                     </Link>
-                    <Link to={"/"}>
+                    <Link to={"/change-plan"}>
                         <img src={changePlan} alt="Alterar plano" /> 
                         alterar plano   
                     </Link>
-                    <Link to={"/"}>
+                    <div className={styles.logout}>
                         <img src={logout} alt="Sair" />
                         Sair
-                    </Link>
+                    </div>
                 </div>
             </div>
 

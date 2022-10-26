@@ -76,18 +76,24 @@
     margin: 0 auto;
 }
 
-.menuContentMobile a {
+.menuContentMobile a,
+.menuContentMobile .logout {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
     color: #fff;
 }
 
-.menuContentMobile a + a {
-    margin-top: 14px;
+.menuContentMobile a + a,
+.menuContentMobile a + div {
+    margin-top: 16px;
 }
 
-.menuContentMobile a img {
+.menuContentMobile a img,
+.menuContentMobile .logout img {
     width: 16px;
     height: 16px;
     object-fit: contain;

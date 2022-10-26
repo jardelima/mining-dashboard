@@ -17,7 +17,7 @@ function App() {
                 <Header />
                     <Wrapper>
                         <Routes>
-                                <Route path="/" element={<Home />} />
+                            <Route path="/" element={<Home />} />
                         </Routes>
                     </Wrapper>
                 <Footer />

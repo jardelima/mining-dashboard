@@ -10,6 +10,10 @@
     margin: 0 auto;
 }
 
+@media (min-width: 1200px) {
+
+}
+
 .menuMobile {
     background-color: #fff;
     padding: 0.5rem 1rem 0.5rem 0.5rem;
@@ -87,12 +91,167 @@
     color: #1C0259;
 }
 
+.menuDesktop {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+}
+
+.menuDesktop::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, rgba(0,0,0,0.2));
+    position: absolute;
+    right: -30px;
+    top: 40px;
+}
+
+.menuItems {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 400ms;
+    position: relative;
+}
+
+.menuItem a:hover,
+.menuItem img:hover {
+    cursor: pointer;
+}
+
+.menuItem img {
+    display: block;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.menuItem:hover {
+    background-color: #fff;
+}
+
+.menuItem:hover .menuHover {
+    pointer-events: initial;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.menuItems div {
+    margin-bottom: 46px;
+}
+
+.notification {
+    position: relative;
+}
+
+.notification a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 6px;
+    padding: 10px;
+    transition: 400ms;
+}
+
+.notification a img {
+    display: block;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.notification a:hover {
+    background-color: #fff;
+}
+
+.notification:hover .menuHover {
+    pointer-events: initial;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.notification a::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #F04545;
+    position: absolute;
+    top: 8px;
+    right: 12px;
+}
+
+.menuHover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem;
+    width: 200px;
+    position: absolute;
+    right: -260px;
+    top: 3px;
+    background-color: #2703A5;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 400ms;
+    transform: translateX(-6px);
+}
+
+.menuHover::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #2703A5;
+    position: absolute;
+    left: -6px;
+    top: 16px;
+    transform: rotate(45deg);
+}
+
+.menuHover p {
+    color: #fff;
+    font-weight: 300;
+    font-size: 20px;
+    font-family: "Lexend Deca";
+}
+
 @media (min-width: 1200px) {
+    .mainHeader {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: unset;
+        max-width: 103px;
+        margin: 0 auto 0 0;
+        padding: 56px 22px;
+        width: 8vw;
+    }
+
     .menuMobile {
         display: none;
     }
-}
 
-.menuDesktop {
+    .menuContentMobile {
+        display: none;
+    }
 
+    .menuDesktop {
+        display: flex;
+    }
 }

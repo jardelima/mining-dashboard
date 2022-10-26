@@ -9,6 +9,7 @@ import config from "../../assets/images/config.png";
 import registers from "../../assets/images/registers.png";
 import reports from "../../assets/images/reports.png";
 import logout from "../../assets/images/logout.png";
+import changePlan from "../../assets/images/change-plan.png";
 
 export default function Header() {
     const [menu, setMenu] = useState(false);
@@ -29,9 +30,24 @@ export default function Header() {
             </div>
 
             <div className={`${styles.menuContentMobile} ${menu && styles.menuContentMobileActive}`}>
-                <Link to={"/"}>Lorem Ipsum</Link>
-                <Link to={"/"}>Lorem Ipsum</Link>
-                <Link to={"/"}>Lorem Ipsum</Link>
+                <div className={styles.menuContentMobileLinks}>
+                    <Link to={"/"}>
+                        <img src={registers} alt="Meus Relatórios" />
+                        Meus relatórios
+                    </Link>
+                    <Link to={"/"}>
+                        <img src={config} alt="Configurações" />
+                        Configurações
+                    </Link>
+                    <Link to={"/"}>
+                        <img src={changePlan} alt="Alterar plano" /> 
+                        alterar plano   
+                    </Link>
+                    <Link to={"/"}>
+                        <img src={logout} alt="Sair" />
+                        Sair
+                    </Link>
+                </div>
             </div>
 
 
@@ -53,23 +69,23 @@ export default function Header() {
                         </div>
                     </div>
 
-                    <div className={styles.menuItem} >
-                        <Link to={"/registers"}>
-                            <img src={registers} alt="Registros" />
-                        </Link>
-
-                        <div className={styles.menuHover}>
-                            <p>Registros</p>
-                        </div>
-                    </div>
-
                     <div className={styles.menuItem}>
                         <Link to={"/reports"}>
                             <img src={reports} alt="Relatórios" />
                         </Link>
 
                         <div className={styles.menuHover}>
-                            <p>Relatórios</p>
+                            <p>Meus relátorios</p>
+                        </div>
+                    </div>
+
+                    <div className={styles.menuItem} >
+                        <Link to={"/registers"}>
+                            <img src={registers} alt="Registros" />
+                        </Link>
+
+                        <div className={styles.menuHover}>
+                            <p>Meus registros</p>
                         </div>
                     </div>
 

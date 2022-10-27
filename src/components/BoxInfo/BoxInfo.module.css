@@ -1,0 +1,114 @@
+.info {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 60px;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    background: linear-gradient(0deg, #FFFFFF 13.36%, rgba(23, 55, 161, 0.801) 121.42%);
+}
+
+.infoDate, 
+.infoStatus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.infoDate::before,
+.infoStatus::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, rgba(0,0,0,0.2));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.infoHours {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.infoHours p {
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 20px;
+    color: #2E026E;
+}
+
+.infoDate p {
+    font-weight: 500;
+    font-size: 34px;
+    color: #2703A5;
+    margin-bottom: 12px;
+}
+
+.infoDate small {
+    font-size: 16px;
+    font-weight: 400;
+    color: #474747;
+
+}
+
+.infoStatus p:first-of-type {
+    font-weight: 500;
+    font-size: 27px;
+    margin-bottom: 20px;
+    color: #2703A5;
+}
+
+.infoStatus p:last-of-type {
+    font-weight: 500;
+    font-size: 34px;
+    color: #2E026E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoStatus p:last-of-type img {
+    margin-left: 10px;
+    display: block;
+    object-fit: contain;
+    animation: loader 3s alternate infinite;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.questions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #2703A5;
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.questions:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+    .info {
+        margin: 0;
+    }
+}

@@ -15,11 +15,9 @@ function App() {
         <div>
             <BrowserRouter>
                 <Header />
-                    <Wrapper>
-                        <Routes>
-                            <Route path="/" element={<Home />} />
-                        </Routes>
-                    </Wrapper>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                    </Routes>
                 <Footer />
             </BrowserRouter>
         </div>

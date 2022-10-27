@@ -3,6 +3,7 @@ import styles from "./Home.module.css";
 import BoxAccount from "../BoxAccount/BoxAccount";
 import BoxInfo from "../BoxInfo/BoxInfo";
 import BoxMaterials from "../BoxMaterials/BoxMaterials";
+import ModalWelcome from "../ModalWelcome/ModalWelcome";
 
 export default function Home() {
     return (
@@ -15,6 +16,8 @@ export default function Home() {
             <div className={styles.column}>
                 <BoxMaterials />
             </div>
+
+            <ModalWelcome />
         </div>
     )
 }

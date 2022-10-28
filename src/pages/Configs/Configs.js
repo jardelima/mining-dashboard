@@ -108,7 +108,6 @@ export default function Configs() {
                     </form>
                 </div>
                 
-
                 <div className={styles.profile}>
                     <h3>Perfil</h3>
 
@@ -231,11 +230,13 @@ export default function Configs() {
             <ModalInfo 
                 active={planInfoActive} 
                 activeModal={planActiveModal} 
+                title={"Planos"}
             />
 
             <ModalInfo 
                 active={configInfoActive} 
                 activeModal={configActiveModal} 
+                title={"Configurações"}
             />
         </div>
     )

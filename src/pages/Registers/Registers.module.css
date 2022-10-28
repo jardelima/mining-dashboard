@@ -1,0 +1,101 @@
+.container {
+
+}
+
+.registers {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 100px;
+}
+
+.registers h2 {
+    font-weight: 500;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.lastReports {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 100px;
+}
+
+.lastReports h2 {
+    font-weight: 500;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1.5fr 0.9fr;
+        grid-column-gap: 30px;
+        height: 100%;
+    }
+
+    .registers {
+        max-width: unset;
+    }
+
+    .registers h2 {
+        font-size: 60px;
+        margin: 5px 0 70px;
+    }
+
+    .registersContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 30px;
+    }
+
+    .lastReports {
+        max-width: 350px;
+        position: relative;
+    }
+
+    .lastReports::before {
+        content: "";
+        width: 2px;
+        height: 70%;
+        border-radius: 24px;
+        background: linear-gradient(to bottom, transparent, #A0F1F2);
+        position: absolute;
+        left: -85px;
+        top: 48px;
+    }
+
+    .lastReports h2 {
+        font-size: 48px;
+    }
+
+    .lastReportsContainer {
+        overflow-y: scroll;
+        padding-right: 1rem;
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;  
+    }
+
+    .lastReportsContainer::-webkit-scrollbar {
+        width: 0;              
+    }
+
+    .lastReportsContainer::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .lastReportsContainer::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
+
+    .lastReportsContainer > div {
+        margin-bottom: 40px;
+    }
+
+    .lastReportsContainer > div:last-of-type {
+        margin-bottom: 200px;
+    }
+}

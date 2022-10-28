@@ -37,6 +37,66 @@
     flex-direction: column;
 }
 
+.infoButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.infoButtons button {
+    width: 100%;
+    max-width: max-content;
+    transition: 400ms;
+}
+
+.infoButtons button:hover {
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+
+.infoButtons button:first-of-type {
+    padding: 0.5rem;
+    background-color: #2703A5;
+    color: #fff;
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    border: 1px solid #2703A5;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoButtons button:first-of-type img {
+    display: inline-block;
+    object-fit: contain;
+    margin-left: 8px;
+}
+
+.infoButtons button:last-of-type {
+    padding: 0.5rem;
+    background-color: #fff;
+    color: #2703A5;
+    border: 1px solid #2703A5;
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoButtons button:last-of-type img {
+    display: inline-block;
+    object-fit: contain;
+    margin-left: 8px;
+}
+
 .infoHours p {
     font-weight: 500;
     font-size: 24px;
@@ -49,6 +109,7 @@
     font-size: 34px;
     color: #2703A5;
     margin-bottom: 12px;
+    text-align: center;
 }
 
 .infoDate small {
@@ -56,6 +117,14 @@
     font-weight: 400;
     color: #474747;
 
+}
+
+.infoStatus.statusFinished p:last-of-type {
+    color: #04CE7A;
+}
+
+.infoStatus.statusFinished p:last-of-type img {
+    animation: none;
 }
 
 .infoStatus p:first-of-type {

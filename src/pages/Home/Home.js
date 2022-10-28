@@ -10,7 +10,11 @@ export default function Home() {
         <div className={styles.container}>
             <div className={styles.column}>
                 <BoxAccount />
-                <BoxInfo />
+                <BoxInfo 
+                    isCountdown={true}
+                    buttonsActive={false}
+                    isFinished={false}
+                />
             </div>
 
             <div className={styles.column}>

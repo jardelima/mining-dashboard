@@ -1,9 +1,14 @@
 import React from "react";
 import "./App.css";
+
+// Components
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+
+// Pages
 import Home from "./pages/Home/Home";
 import Configs from "./pages/Configs/Configs";
+import Registers from "./pages/Registers/Registers";
 
 import { 
     BrowserRouter,
@@ -19,6 +24,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/configs" element={<Configs />} />
+                        <Route path="/registers" element={<Registers />} />
                     </Routes>
                 <Footer />
             </BrowserRouter>

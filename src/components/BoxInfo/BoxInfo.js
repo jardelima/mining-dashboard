@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import styles from "./BoxInfo.module.css";
 import Countdown from "../Countdown/Countdown";
 import ModalInfo from "../ModalInfo/ModalInfo";
@@ -6,10 +6,22 @@ import ModalInfo from "../ModalInfo/ModalInfo";
 // Images
 import loader from "../../assets/images/loader.svg";
 import info from "../../assets/images/info.svg";
+import check from "../../assets/images/check.svg";
+import cloud from "../../assets/images/cloud.svg";
+import registers from "../../assets/images/registers-icon.svg";
 
-export default function BoxInfo() {
+export default function BoxInfo(props) {
     const [infoActive, setInfoActive] = useState(false);
     const [activeModal, setActiveModal] = useState(false);
+    const [isCountdown, setIsCountdown] = useState(false);
+    const [isFinished, setIsFinished] = useState(false);
+    const [buttonsActive, setButtonsActive] = useState(false);
+
+    useEffect(() => setIsCountdown(props.isCountdown) ,[props.isCountdown]);
+
+    useEffect(() => setButtonsActive(props.buttonsActive), [props.buttonsActive]);
+
+    useEffect(() => setIsFinished(props.isFinished), [props.isFinished]);
 
     const months = [
         "Janeiro",
@@ -31,42 +43,64 @@ export default function BoxInfo() {
     const month = months[date.getMonth()];
 
     return (
-        <>
-            <div className={styles.info}>
-                <div className={styles.infoDate}>
-                    <p>{day} de {month}</p>
-                    
-                    <small>ID #2121</small>
-                </div>
+        <div className={styles.info}>
+            <div className={styles.infoDate}>
+                <p>{day} de {month}</p>
+                
+                <small>ID #2121</small>
+            </div>
 
-                <div className={styles.infoStatus}>
-                    <p>Status</p>
+            <div className={`${styles.infoStatus} ${isFinished && styles.statusFinished}`}>
+                <p>Status</p>
 
+                {isFinished ? 
+                    <p>
+                        Concluído
+                        <img src={check} alt="Concluído" />
+                    </p>
+                    :
                     <p>
                         Processando
                         <img src={loader} alt="Processando"/>
                     </p>
-                </div>
+                }
+            </div>
 
+            {isCountdown && 
                 <div className={styles.infoHours}>
                     <Countdown />
                 </div>
+            }
 
-                <div 
-                    className={styles.questions} 
-                    onClick={() => {
-                        setInfoActive(true);
-                        setActiveModal(!activeModal);
-                    }}
-                >
-                    <img src={info} alt="Dúvidas" /> 
+            {buttonsActive && 
+                <div className={styles.infoButtons}>
+                    <button>
+                        BAIXAR RELÁTORIO
+                        <img src={cloud} alt="Baixar relatórios"/>
+                    </button>
+
+                    <button>
+                        ver registro
+                        <img src={registers} alt="Ver registros"/>
+                    </button>
                 </div>
+            }
+
+            <div 
+                className={styles.questions} 
+                onClick={() => {
+                    setInfoActive(true);
+                    setActiveModal(!activeModal);
+                }}
+            >
+                <img src={info} alt="Dúvidas" /> 
             </div>
 
             <ModalInfo 
                 active={infoActive} 
                 activeModal={activeModal} 
+                title={"Status"}
             />
-        </>
+        </div>
     )
 }

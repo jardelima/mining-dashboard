@@ -20,7 +20,7 @@ export default function ModalInfo(props) {
 
                     <div className={styles.title}>
                         <p>Informação</p>
-                        <h4>Exemplo de informação</h4>
+                        <h4>{props.title}</h4>
                     </div>
                 </div>
 

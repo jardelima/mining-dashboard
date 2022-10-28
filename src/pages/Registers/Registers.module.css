@@ -28,6 +28,10 @@
     margin-bottom: 30px;
 }
 
+.lastReportsContainer > div:last-of-type {
+    margin-bottom: 100px;
+}
+
 @media (min-width: 1200px) {
     .container {
         display: grid;
@@ -54,18 +58,6 @@
 
     .lastReports {
         max-width: 350px;
-        position: relative;
-    }
-
-    .lastReports::before {
-        content: "";
-        width: 2px;
-        height: 70%;
-        border-radius: 24px;
-        background: linear-gradient(to bottom, transparent, #A0F1F2);
-        position: absolute;
-        left: -85px;
-        top: 48px;
     }
 
     .lastReports h2 {
@@ -97,5 +89,28 @@
 
     .lastReportsContainer > div:last-of-type {
         margin-bottom: 200px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .registersContainer {
+        position: relative;
+    }
+
+    .registersContainer::before {
+        content: "";
+        width: 2px;
+        height: 70%;
+        border-radius: 24px;
+        background: linear-gradient(to bottom, transparent, #A0F1F2);
+        position: absolute;
+        right: -45px;
+        top: 0px;
+    }
+}
+
+@media (min-width: 1900px) {
+    .registersContainer::before {
+        right: -80px;
     }
 }

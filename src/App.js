@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import Configs from "./pages/Configs/Configs";
 import Registers from "./pages/Registers/Registers";
+import Reports from "./pages/Reports/Reports";
 
 import { 
     BrowserRouter,
@@ -25,6 +26,7 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/configs" element={<Configs />} />
                         <Route path="/registers" element={<Registers />} />
+                        <Route path="/reports" element={<Reports />} />
                     </Routes>
                 <Footer />
             </BrowserRouter>

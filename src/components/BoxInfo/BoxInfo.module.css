@@ -38,9 +38,9 @@
 }
 
 .infoButtons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 144px 122px;
+    grid-column-gap: 10px;
     width: 100%;
     max-width: 300px;
     margin: 0 auto;

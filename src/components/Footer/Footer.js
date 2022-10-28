@@ -31,7 +31,7 @@ export default function Footer() {
                         <img src={reports} alt="Relatórios" />
                     </Link>
 
-                    <Link to={"/config"}>
+                    <Link to={"/configs"}>
                         <img src={config} alt="Configurações" />
                     </Link>
                 </div>

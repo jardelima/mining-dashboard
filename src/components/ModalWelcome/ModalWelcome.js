@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./ModalWelcome.module.css";
 
 export default function ModalWelcome() {
-    const [modal, setModal] = useState(true);
+    const [modal, setModal] = useState(false);
 
     return (
         <div className={`${styles.modalContainer} ${!modal && styles.modalDisabled}`}>

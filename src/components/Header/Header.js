@@ -40,7 +40,7 @@ export default function Header() {
                             <img src={registers} alt="Meus Relatórios" />
                             Meus relatórios
                         </Link>
-                        <Link to={"/config"}>
+                        <Link to={"/configs"}>
                             <img src={config} alt="Configurações" />
                             Configurações
                         </Link>
@@ -95,7 +95,7 @@ export default function Header() {
                         </div>
 
                         <div className={styles.menuItem}>
-                            <Link to={"/config"}>
+                            <Link to={"/configs"}>
                                 <img src={config} alt="Configurações" />
                             </Link>
 

@@ -1,0 +1,54 @@
+.boxDisabled {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 6px;
+}
+
+.boxContent h2 {
+    font-weight: 500;
+    font-size: 32px;
+    color: #2703A5;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.boxContent a {
+    width: max-content;
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+    background-color: #2703A5;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 4px;
+    transition: 400ms;
+}
+
+.boxContent a {
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+
+.boxContent a img {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    margin-left: 8px;
+}

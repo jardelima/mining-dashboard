@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./BoxGraphicDefault.module.css";
 import { Link } from "react-router-dom";
 import ModalInfo from "../ModalInfo/ModalInfo";
+import BoxDisabled from "../BoxDisabled/BoxDisabled";
 
 // Images
 import info from "../../assets/images/info.svg";
@@ -19,6 +20,7 @@ import arrow from "../../assets/images/next-slider.svg";
 export default function BoxGraphicDefault(props) {
     const [graphicInfoActive, setGraphicInfoActive] = useState(false);
     const [graphicActiveModal, setGraphicActiveModal] = useState(false);
+    const [graphicDisabled, setGraphicDisabled] = useState(false);
 
     return (
         <div className={styles.boxGraphicDefault}>
@@ -56,6 +58,8 @@ export default function BoxGraphicDefault(props) {
                 activeModal={graphicActiveModal} 
                 title={props.titleModal}
             />
+
+            {graphicDisabled && <BoxDisabled />}
         </div>
     )
 }

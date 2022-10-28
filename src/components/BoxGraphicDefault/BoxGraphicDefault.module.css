@@ -1,0 +1,110 @@
+.boxGraphicDefault {
+    width: 100%;
+    background: linear-gradient(0deg, #FFFFFF 13.36%, rgba(23, 55, 161, 0.801) 121.42%);
+    padding: 1.5rem;
+    border-radius: 6px;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+
+.boxHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.boxHeader h4 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #2703A5;
+}
+
+.boxHeader button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #2703A5;
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: none;
+    transition: 400ms;
+}
+
+.boxHeader button:hover {
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+
+.boxGraphic {
+    display: block;
+    margin-bottom: 40px;
+}
+
+.boxGraphic img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.boxFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.boxFooter a {
+    transition: 400ms;
+}
+
+.boxFooter a:hover {
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+
+.boxFooter a:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: #fff;
+    border: 1px solid #2703A5;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    color: #2703A5;
+    margin-right: 8px;
+}
+
+.boxFooter a img {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin-left: 8px;
+}
+
+.boxFooter a:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: #2703A5;
+    border: 1px solid #2703A5;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+}
+
+.boxFooter a:last-of-type img {
+    filter: brightness(0) invert(1);
+}

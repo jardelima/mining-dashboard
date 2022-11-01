@@ -13,6 +13,7 @@ import Reports from "./pages/Reports/Reports";
 
 // Singles
 import SingleGenders from "./pages/SingleGenders/SingleGenders";
+import SingleGraphicGenders from "./pages/SingleGraphicGenders/SingleGraphicGenders";
 
 import { 
     BrowserRouter,
@@ -30,7 +31,9 @@ function App() {
                         <Route path="/configs" element={<Configs />} />
                         <Route path="/registers" element={<Registers />} />
                         <Route path="/reports" element={<Reports />} />
-                        <Route path="/registers/genders" element={<SingleGenders />} />
+                        <Route path="/genders" element={<SingleGenders />} />
+                        <Route path="/genders/graphic-genders" element={<SingleGraphicGenders />} />
+
                     </Routes>
                 <Footer />
             </BrowserRouter>

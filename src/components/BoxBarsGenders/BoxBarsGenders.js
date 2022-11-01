@@ -28,12 +28,12 @@ export default function BoxBarsGenders() {
     ];
 
     useEffect(() => {
-        setSingleGenders(window.location.href.split("/")[4] === "genders");
+        setSingleGenders(window.location.href.split("/")[3] === "genders");
     }, []);
 
     const desktopBarFeminine = {
         width: "",
-        height: singleGenders ? "60px" : "20px",
+        height: singleGenders ? "50px" : "20px",
     }
 
     const mobileBarFeminine = {
@@ -43,7 +43,7 @@ export default function BoxBarsGenders() {
 
     const desktopBarMasculine = {
         width: "",
-        height: singleGenders ? "60px" : "20px",
+        height: singleGenders ? "50px" : "20px",
     }
 
     const mobileBarMasculine = {
@@ -139,7 +139,7 @@ export default function BoxBarsGenders() {
                 }
 
                 {singleGenders && 
-                    <Link to={"/"}>
+                    <Link to={"/registers"}>
                         <img src={exit} alt="Sair" />
                     </Link>
                 }
@@ -148,7 +148,7 @@ export default function BoxBarsGenders() {
             {getValues()}
 
             <div className={styles.boxBarsFooter}>
-                <Link to={"/"} className={styles.registerButton}>
+                <Link to={"/registers"} className={styles.registerButton}>
                     ver registro
                     <img src={register} alt="Registros" />
                 </Link>
@@ -164,7 +164,7 @@ export default function BoxBarsGenders() {
                             <img src={info} alt="Informações" />
                         </button>
 
-                        <Link to={"/registers/graphic-genders"} className={styles.graphicButton}>
+                        <Link to={"/genders/graphic-genders"} className={styles.graphicButton}>
                             GRÁFICO COMPLETO
                             <img src={arrow} alt="Gráficos completos" /> 
                         </Link>
@@ -172,7 +172,7 @@ export default function BoxBarsGenders() {
                 }
 
                 {!singleGenders && 
-                    <Link to={"/registers/genders"} className={styles.graphicButton}>
+                    <Link to={"/genders"} className={styles.graphicButton}>
                         GRÁFICO COMPLETO
                         <img src={arrow} alt="Gráficos completos" /> 
                     </Link>

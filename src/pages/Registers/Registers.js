@@ -18,6 +18,7 @@ export default function Registers() {
                     <BoxRegisters 
                         titleBox={"Gênero do público"}
                         titleModal={"Gênero do público"}
+                        linkTo={"/genders"}
                     />
 
                     <BoxRegisters 

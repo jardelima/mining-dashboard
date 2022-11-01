@@ -16,7 +16,7 @@ export default function BoxRegisters(props) {
             <h3>{props.titleBox}</h3>
 
             <div className={styles.boxRegistersButtons}>
-                <Link to={"/"}>
+                <Link to={props.linkTo}>
                     VER REGISTRO
                     <img src={seeRegisters} alt="Pasta de registros" />
                 </Link>

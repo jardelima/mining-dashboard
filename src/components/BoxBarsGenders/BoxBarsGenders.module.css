@@ -1,0 +1,233 @@
+.boxBars {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(360deg, #FFFFFF 5.12%, rgba(160, 241, 242, 0) 122.67%);
+}
+
+.bars {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barContainer {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.bar {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+}
+
+.bar span {
+    display: block;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.labelFeminine {
+    color: #D98B72;
+}
+
+.labelMasculine {
+    color: #9272D9;
+}
+
+.barContainer p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #474747;
+    margin-top: 10px;
+}
+
+.barFeminine {
+    content: "";
+    height: 20px;
+    max-width: 100%;
+    background-color: #D98B72;
+    border-radius: 24px;
+}
+
+.barMasculine {
+    content: "";
+    height: 20px;
+    max-width: 100%;
+    background-color: #9272D9;
+    border-radius: 24px;
+}
+
+.boxBarsHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.boxBarsHeader h3 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #2703A5;
+}
+
+.boxBarsHeader button, 
+.boxBarsHeader a,
+.buttons button {
+    padding: 0.5rem;
+    background-color: #2703A5;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 400ms;
+    margin-right: 10px;
+}
+
+.boxBarsHeader button:hover,
+.buttons button {
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+
+.boxBarsFooter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.boxBarsFooter a {
+    width: 100%;
+    transition: 400ms;
+}
+
+.boxBarsFooter a:hover {
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+
+.registerButton {
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    color: #2703A5;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 1px solid #2703A5;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.boxBarsFooter a img {
+    display: inline-block;
+    object-fit: contain;
+    margin-left: 8px;
+    width: 20px;
+    height: 20px;
+}
+
+.graphicButton {
+    padding: 0.5rem 1rem;
+    background-color: #2703A5;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 1px solid #2703A5;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.graphicButton img {
+    filter: brightness(0) invert(1);
+}
+
+@media (min-width: 1200px) {
+    .boxBars {
+        width: 100%;
+        max-width: unset;
+        height: 100%;
+    }
+
+    .bars {
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .bar {
+        height: unset;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+
+    .barContainer {
+        display: unset;
+    }
+
+    .bar span {
+        margin-bottom: 0;
+        margin-left: 10px;
+    }
+
+    .barContainer p {
+        margin-bottom: 10px;
+    }
+    
+    .boxBarsFooter {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .registerButton {
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    .boxBarsFooter a {
+        width: max-content;
+    }
+
+    .buttons {
+        max-width: 270px;
+    }
+}

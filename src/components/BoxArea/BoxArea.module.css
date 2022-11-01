@@ -1,0 +1,50 @@
+.boxArea {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    height: 254px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(360deg, #FFFFFF 5.12%, rgba(160, 241, 242, 0) 122.67%);
+}
+
+.boxArea button {
+    background-color: #2703A5;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    position: absolute;
+    transition: 400ms;
+}
+
+.boxArea button img {
+    display: block;
+    width: 30x;
+    height: 20px;
+    object-fit: contain;
+}
+
+.boxArea button:hover {
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+
+.boxArea button:first-of-type {
+    top: 20px;
+    left: 20px;
+    padding: 0.5rem 2rem;
+}
+
+.boxArea button:last-of-type {
+    top: 20px;
+    right: 20px;
+}

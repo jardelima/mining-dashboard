@@ -155,7 +155,7 @@ export default function Configs() {
                             <textarea 
                                 id="description"
                                 value={description}
-                                onChange={setDescription}
+                                onChange={(event, value) => setDescription(value)}
                                 placeholder={"Nome do usuário"}
                             />
                         </div>

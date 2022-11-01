@@ -11,6 +11,9 @@ import Configs from "./pages/Configs/Configs";
 import Registers from "./pages/Registers/Registers";
 import Reports from "./pages/Reports/Reports";
 
+// Singles
+import SingleGenders from "./pages/SingleGenders/SingleGenders";
+
 import { 
     BrowserRouter,
     Route,
@@ -27,6 +30,7 @@ function App() {
                         <Route path="/configs" element={<Configs />} />
                         <Route path="/registers" element={<Registers />} />
                         <Route path="/reports" element={<Reports />} />
+                        <Route path="/registers/genders" element={<SingleGenders />} />
                     </Routes>
                 <Footer />
             </BrowserRouter>

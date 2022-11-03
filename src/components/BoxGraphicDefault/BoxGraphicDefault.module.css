@@ -54,6 +54,7 @@
 }
 
 .boxFooter {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -78,7 +79,7 @@
     border-radius: 4px;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 10px;
     color: #2703A5;
     margin-right: 8px;
 }
@@ -101,10 +102,24 @@
     border-radius: 4px;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 10px;
     color: #fff;
 }
 
 .boxFooter a:last-of-type img {
     filter: brightness(0) invert(1);
+}
+
+@media (min-width: 1200px) {
+    .boxGraphicDefault {
+        height: 420px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .boxGraphic img {
+        height: 224px;
+    }
 }

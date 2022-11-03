@@ -1,7 +1,7 @@
 .boxNPS {
     width: 100%;
-    max-width: max-content;
-    margin: 0 auto 30px;
+    max-width: 600px;
+    margin: 0 auto 60px;
     height: max-content;
     display: flex;
     align-items: center;
@@ -24,17 +24,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: row-reverse;
     margin-bottom: 30px;
 }
 
 .score p {
     margin: 0;
-    line-height: 0px;
+    line-height: 30px;
     font-weight: 400;
     color: #606060;
     font-size: 24px;
     text-transform: uppercase;
+    margin-left: 10px;
 }
 
 .score h2 {
@@ -66,4 +67,22 @@
     text-align: center;
     color: #04CE7A;
     text-transform: uppercase;
+}
+
+@media (min-width: 1200px) {
+    .boxNPS {
+        max-width: max-content;
+        margin: 0 30px 30px;
+        height: 242px;
+    }
+
+    .score {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .score p {
+        line-height: 0;
+        margin-left: 0;
+    }
 }

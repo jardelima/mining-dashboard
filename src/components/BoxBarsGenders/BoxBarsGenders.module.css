@@ -183,7 +183,7 @@
     .boxBars {
         width: 100%;
         max-width: unset;
-        height: max-content;
+        height: 420px;
     }
 
     .bars {

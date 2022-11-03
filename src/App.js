@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
 // Pages
+import Dashboard from "./pages/Dashboard/Dashboard";
 import Home from "./pages/Home/Home";
 import Configs from "./pages/Configs/Configs";
 import Registers from "./pages/Registers/Registers";
@@ -32,7 +33,9 @@ function App() {
             <BrowserRouter>
                 <Header />
                     <Routes>
-                        <Route path="/" element={<Home />} />
+                        {/* <Route path="/" element={<Home />} /> */}
+                        <Route path="/" element={<Dashboard />} />
+
                         <Route path="/configs" element={<Configs />} />
                         <Route path="/registers" element={<Registers />} />
                         <Route path="/graphic-nps" element={<SingleNPS />} />

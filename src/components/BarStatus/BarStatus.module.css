@@ -1,7 +1,7 @@
 .bar {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 60px;
     height: 51px;
     border-radius: 24px;
     display: flex;
@@ -21,6 +21,12 @@
     justify-content: center;
     border-radius: 6px;
     border: none;
+    transition: 400ms;
+}
+
+.bar > button:hover {
+    filter: brightness(0.9);
+    cursor: pointer;
 }
 
 .barNegative {
@@ -148,6 +154,7 @@
 
 @media (min-width: 1200px) {
     .bar {
+        max-width: unset;
         height: 120px;
     }
 

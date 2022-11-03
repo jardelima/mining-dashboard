@@ -1,8 +1,8 @@
 .boxArea {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto 30px;
-    height: 254px;
+    margin: 0 auto 60px;
+    height: 242px;
     display: flex;
     position: relative;
     align-items: flex-start;
@@ -11,6 +11,7 @@
     border: none;
     border-radius: 8px;
     background: linear-gradient(360deg, #FFFFFF 5.12%, rgba(160, 241, 242, 0) 122.67%);
+    overflow: hidden;
 }
 
 .boxArea button {
@@ -47,4 +48,10 @@
 .boxArea button:last-of-type {
     top: 20px;
     right: 20px;
+}
+
+@media (min-width: 1200px) {
+    .boxArea {
+        max-width: unset;
+    }
 }

@@ -131,6 +131,7 @@
 
 @media (min-width: 1200px) {
     .account {
+        max-width: unset;
         margin: 0 0 35px;
     }
 }

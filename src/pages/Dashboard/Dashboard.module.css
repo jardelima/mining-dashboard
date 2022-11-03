@@ -1,0 +1,29 @@
+.dashboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dashboardHeader, 
+.dashboardFooter {
+    width: 100%;
+}
+
+@media (min-width: 1200px) {
+    .dashboard {
+        width: 100%;
+    }
+
+    .dashboardHeader {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .dashboardFooter {
+        display: grid;
+        grid-template-columns: 0.8fr 0.8fr 1.2fr;
+        grid-column-gap: 30px;
+    }
+}

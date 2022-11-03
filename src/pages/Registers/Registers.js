@@ -13,7 +13,7 @@ export default function Registers() {
                     <BoxRegisters 
                         titleBox={"NPS Score"}
                         titleModal={"NPS Score"}
-                        linkTo={"/registers/graphic-nps"}
+                        linkTo={"/graphic-nps"}
                     />
 
                     <BoxRegisters 
@@ -25,11 +25,13 @@ export default function Registers() {
                     <BoxRegisters 
                         titleBox={"Atributos positivos"}
                         titleModal={"Atributos positivos"}
+                        linkTo={"/positives-attributes"}
                     />
 
                     <BoxRegisters 
                         titleBox={"Atributos negativos"}
                         titleModal={"Atributos negativos"}
+                        linkTo={"/negatives-attributes"}
                     />
                 </div>
             </div>

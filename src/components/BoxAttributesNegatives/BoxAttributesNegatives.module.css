@@ -1,0 +1,170 @@
+.attributes {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.4rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(360deg, #FFFFFF 5.12%, rgba(160, 241, 242, 0) 122.67%);
+}
+
+.attributesHeader {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.attributesHeader h3 {
+    font-weight: 500;
+    font-size: 24px;
+    color: #2703A5;
+    width: 100%;
+    max-width: 200px;
+}
+
+.attributesHeader a {
+    background-color: #2703A5;
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.attributesGraphic {
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+    scrollbar-width: auto;
+    scrollbar-color: #2E026E #E8E8E8;  
+    margin-bottom: 60px;
+}
+
+.attributesGraphic::-webkit-scrollbar {
+    width: 100%;
+    height: 14px;
+}
+
+.attributesGraphic::-webkit-scrollbar-track {
+    background: #E8E8E8;
+    border-radius: 24px;
+}
+
+.attributesGraphic::-webkit-scrollbar-thumb {
+    background-color: #2E026E;   
+    border-radius: 20px;    
+}
+
+.attributesGraphic > div {
+    min-width: 340px;
+    margin-right: 30px;
+}
+
+
+.attributesGraphic img {
+    display: block;
+    width: 800px;
+    height: 488px;
+    object-fit: cover;
+}
+
+.attributesFooter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.attributesFooter > a {
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    color: #2703A5;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 1px solid #2703A5;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    transition: 400ms;
+}
+
+.attributesFooter > a img {
+    margin-left: 8px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons button {
+    padding: 0.5rem;
+    background-color: #2703A5;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: 400ms;
+}
+
+.buttons button:last-of-type {
+    padding: 0.56rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.buttons button:last-of-type img {
+    margin-left: 8px;
+}
+
+.attributesFooter > a:hover,
+.attributesFooter .buttons button {
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+
+@media (min-width: 1200px) {
+    .attributes {
+        max-width: unset;
+        height: 76vh;
+        padding: 2rem;
+    }
+
+    .attributesHeader h3 {
+        max-width: unset;
+        font-size: 48px;
+    }
+
+    .attributesGraphic img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 600px;
+        object-fit: cover;
+    }
+
+    .attributesFooter {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .attributesFooter > a {
+        margin-bottom: 0;
+    }
+}

@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styles from "./ModalWelcome.module.css";
 
+// Context
+import { User } from "../../context/User/index";
+
 export default function ModalWelcome() {
-    const [modal, setModal] = useState(false);
+    const { modalWelcome, setModalWelcome } = useContext(User);
+
+    const [modal, setModal] = useState(modalWelcome);
 
     return (
         <div className={`${styles.modalContainer} ${!modal && styles.modalDisabled}`}>
@@ -17,8 +22,8 @@ export default function ModalWelcome() {
                     </p>
 
                     <div className={styles.modalButtons}>
-                        <button onClick={() => setModal(false)}>fazer o tour</button>
-                        <button onClick={() => setModal(false)}>começar</button>
+                        <button onClick={() => {setModal(false); setModalWelcome(false)}}>fazer o tour</button>
+                        <button onClick={() => {setModal(false); setModalWelcome(false)}}>começar</button>
                     </div>
                 </div>
             </div>

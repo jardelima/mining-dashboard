@@ -12,7 +12,7 @@ import menuImage from "../../assets/images/icon-menu.svg";
 import cloud from "../../assets/images/cloud.svg";
 
 export default function BoxBarStatus() {
-    const [status, setStatus] = useState(39);
+    const [status, setStatus] = useState(59);
     const [statusInfoActive, setStatusInfoActive] = useState(false);
     const [statusActiveModal, setStatusActiveModal] = useState(false);
     const [menu, setMenu] = useState(false);
@@ -123,7 +123,7 @@ export default function BoxBarStatus() {
                 <button>Compartilhar</button>
             </div>
 
-            <Link to={"/"}>
+            <Link to={"/registers"}>
                 <img src={exit} alt="Sair" />
             </Link>
 

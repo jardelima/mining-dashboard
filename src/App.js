@@ -14,6 +14,7 @@ import Reports from "./pages/Reports/Reports";
 // Singles
 import SingleGenders from "./pages/SingleGenders/SingleGenders";
 import SingleGraphicGenders from "./pages/SingleGraphicGenders/SingleGraphicGenders";
+import SingleNPS from "./pages/SingleNPS/SingleNPS";
 
 import { 
     BrowserRouter,
@@ -30,10 +31,10 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/configs" element={<Configs />} />
                         <Route path="/registers" element={<Registers />} />
+                        <Route path="/registers/graphic-nps" element={<SingleNPS />} />
                         <Route path="/reports" element={<Reports />} />
                         <Route path="/genders" element={<SingleGenders />} />
                         <Route path="/genders/graphic-genders" element={<SingleGraphicGenders />} />
-
                     </Routes>
                 <Footer />
             </BrowserRouter>

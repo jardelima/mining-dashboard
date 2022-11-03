@@ -1,0 +1,313 @@
+.boxBarStatus {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.barNegative {
+    width: 100%;
+    height: 30%;
+    background-color: #F04545;
+    border-radius: 24px 24px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 2rem;
+    position: relative;
+}
+
+.barNegative .accountMenuContainer {
+    bottom: 18px;
+}
+
+.barStable {
+    width: 100%;
+    height: 30%;
+    background-color: #FAA924;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 2rem;
+    position: relative;
+}
+
+.barStable .accountMenuContainer {
+    bottom: 18px;
+}
+
+.barPositive {
+    width: 100%;
+    height: 50%;
+    background-color: #04CE7A;
+    border-radius: 0 0 24px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 2rem;
+    position: relative;
+}
+
+.barNegative h3,
+.barStable h3,
+.barPositive h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.barNegative > p,
+.barStable > p,
+.barPositive > p {
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.boxBarStatus > a {
+    padding: 0.5rem;
+    background-color: #2703A5;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 400ms;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.boxBarStatus > a:hover {
+    filter: brightness(0.9);
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    max-width: 218px;
+}
+
+.buttons button {
+    padding: 0.5rem;
+    background-color: #2703A5;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 400ms;
+}
+
+.buttons button:hover {
+    filter: brightness(0.9);
+    cursor: pointer;
+}
+
+.buttons button:last-of-type {
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 0.6rem 2rem;
+    margin-left: 10px;
+}
+
+.accountMenuContainer {
+    position: absolute;
+    bottom: 120px;
+}
+
+.accountMenu {
+    position: relative;
+}
+
+.accountMenuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(360deg, #FFFFFF 0%, rgba(160, 241, 242, 0) 185.11%);
+    filter: drop-shadow(8px 8px 20px rgba(39, 3, 165, 0.17));
+    border-radius: 6px;
+    padding: 0.5rem;
+}
+
+.accountMenuButton p {
+    color: #2703A5;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.accountMenuButton img {
+    width: 30px;
+    height: 20px;
+    display: block;
+    object-fit: contain;
+}
+
+.accountMenuButton img:hover {
+    cursor: pointer;
+}
+
+.accountMenuLinks {
+    width: 240px;
+    background-color: #2703A5;
+    margin-top: 20px;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    z-index: 10;
+    transition: 200ms;
+    opacity: 0;
+    position: absolute;
+    left: -35px;
+    bottom: -160px;
+    pointer-events: none;
+    box-shadow: 1px 3px 4px 1px rgba(0,0,0,0.2);
+}
+
+.accountMenuLinksActive {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.downloadRegister {
+    margin-bottom: 16px;
+}
+
+.downloadRegister img {
+    margin-right: 10px;
+}
+
+.accountMenuLinks a,
+.accountMenuLinks .downloadRegister,
+.accountMenuLinks .logout {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.accountMenuLinks a:hover,
+.accountMenuLinks .downloadRegister:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.accountMenuLinks a + a,
+.accountMenuLinks a + div {
+    margin-top: 16px;
+}
+
+.accountMenuLinks a img,
+.accountMenuLinks .logout img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    margin-right: 12px;
+    filter: brightness(0) invert(1);
+}
+
+@media (min-width: 1200px) {
+    .boxBarStatus {
+        max-width: unset;
+        flex-direction: row;
+    }
+
+    .boxBarStatus > a {
+        top: 20px;
+        right: 20px;
+    }
+
+    .barNegative {
+        height: 100%;
+        width: 30%;
+        border-radius: 24px 0 0 24px;
+        align-items: flex-start;
+    }
+
+    .barNegative .accountMenuContainer {
+        right: unset;
+        left: unset;
+        bottom: 300px;
+    }
+
+    .barStable {
+        height: 100%;
+        width: 25%;
+        align-items: flex-start;
+    }
+
+    .barStable .accountMenuContainer {
+        right: unset;
+        left: unset;
+        bottom: 300px;
+    }
+
+    .barPositive {
+        height: 100%;
+        width: 45%;
+        align-items: flex-start;
+        border-radius: 0 24px 24px 0;
+    }
+
+    .barPositive .accountMenuContainer {
+        bottom: 300px;
+        right: 100px;
+    }
+
+    .barNegative h3,
+    .barStable h3,
+    .barPositive h3 {
+        font-size: 28px;
+    }
+
+    .barNegative > p,
+    .barStable > p,
+    .barPositive > p {
+        font-size: 72px;
+    }
+
+    .buttons {
+        left: unset;
+        right: 60px;
+        bottom: 60px;
+    }
+
+    .accountMenu:hover {
+        cursor: pointer;
+    }
+
+    .accountMenuButton {
+        width: 200px;
+    }
+
+    .accountMenuLinks {
+        left: -20px;
+    }
+}

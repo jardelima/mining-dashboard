@@ -1,0 +1,169 @@
+.bar {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 51px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.bar > button {
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    background-color: #2703A5;
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: none;
+}
+
+.barNegative {
+    content: "";
+    width: 30%;
+    height: 100%;
+    background-color: #F04545;
+    border-radius: 24px 0 0 24px;
+}
+
+.barStable {
+    content: "";
+    width: 20%;
+    height: 100%;
+    background-color: #FAA924;
+}
+
+.barPositive {
+    content: "";
+    width: 50%;
+    height: 100%;
+    background-color: #04CE7A;
+    border-radius: 0 24px 24px 0;
+}
+
+.accountMenuContainer {
+    position: absolute;
+    right: 20px;
+    top: 8px;
+}
+
+.accountMenu {
+    position: relative;
+}
+
+.accountMenuButton {
+    background-color: #2703A5;
+    border-radius: 6px;
+    padding: 0.5rem;
+}
+
+.accountMenuButton p {
+    color: #fff;
+    font-weight: 500;
+}
+
+.accountMenuButton img {
+    width: 30px;
+    height: 20px;
+    display: block;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.accountMenuButton img:hover {
+    cursor: pointer;
+}
+
+.accountMenuLinks {
+    width: 240px;
+    background-color: #2703A5;
+    margin-top: 20px;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    z-index: 10;
+    transition: 200ms;
+    opacity: 0;
+    position: absolute;
+    left: -180px;
+    bottom: -160px;
+    pointer-events: none;
+    box-shadow: 1px 3px 4px 1px rgba(0,0,0,0.2);
+}
+
+.accountMenuLinksActive {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.downloadRegister {
+    margin-bottom: 16px;
+}
+
+.downloadRegister img {
+    margin-right: 10px;
+}
+
+.accountMenuLinks a,
+.accountMenuLinks .downloadRegister,
+.accountMenuLinks .logout {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.accountMenuLinks a:hover,
+.accountMenuLinks .downloadRegister:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.accountMenuLinks a + a,
+.accountMenuLinks a + div {
+    margin-top: 16px;
+}
+
+.accountMenuLinks a img,
+.accountMenuLinks .logout img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    margin-right: 12px;
+    filter: brightness(0) invert(1);
+}
+
+@media (min-width: 1200px) {
+    .bar {
+        height: 120px;
+    }
+
+    .bar button {
+        top: 40px;
+    }
+
+    .accountMenu:hover {
+        cursor: pointer;
+    }
+
+    .accountMenuContainer {
+        top: 40px;
+    }
+
+    .accountMenuLinks {
+        left: -100px;
+    }
+}

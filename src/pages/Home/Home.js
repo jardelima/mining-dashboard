@@ -4,11 +4,13 @@ import BoxAccount from "../../components/BoxAccount/BoxAccount";
 import BoxInfo from "../../components/BoxInfo/BoxInfo";
 import BoxMaterials from "../../components/BoxMaterials/BoxMaterials";
 import ModalWelcome from "../../components/ModalWelcome/ModalWelcome";
+import BoxBarStatus from "../../components/BoxBarStatus/BoxBarStatus";
 
 export default function Home() {
     return (
         <div className={styles.container}>
-            <div className={styles.column}>
+            <BoxBarStatus />
+            {/* <div className={styles.column}>
                 <BoxAccount />
 
                 <BoxInfo 
@@ -20,7 +22,7 @@ export default function Home() {
 
             <div className={styles.column}>
                 <BoxMaterials />
-            </div>
+            </div> */}
 
             <ModalWelcome />
         </div>

@@ -1,8 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import styles from "./BoxNPS.module.css";
 
+// Context
+import { User } from "../../context/User";
+
 export default function BoxNPS() {
-    const [score, setScore] = useState(80);
+    const { statusNumber } = useContext(User);
+
+    const [score, setScore] = useState(statusNumber);
     const [scoreColor, setScoreColor] = useState("");
     const [status, setStatus] = useState("");
     const [loading, setLoading] = useState(false);
@@ -11,7 +16,7 @@ export default function BoxNPS() {
         if((score >= 0 && score <= 30) || score < 0) {
             setScoreColor("#F04545");
             setStatus("Mal")
-        } else if(score >= 40 && score <= 79) {
+        } else if(score > 30 && score <= 79) {
             setScoreColor("#FAA924");
             setStatus("Estável");
         } else if(score >= 80) {

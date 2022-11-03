@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styles from "./BarStatus.module.css";
 import { Link } from "react-router-dom";
 import ModalInfo from "../ModalInfo/ModalInfo";
@@ -10,24 +10,18 @@ import registers from "../../assets/images/reports.svg";
 import menuImage from "../../assets/images/icon-menu.svg";
 import cloud from "../../assets/images/cloud.svg";
 
+// Context
+import { User } from "../../context/User";
+
 export default function BarStatus() {
+    const { statusNumber } = useContext(User);
+
     const [menu, setMenu] = useState(false);
     const [statusInfoActive, setStatusInfoActive] = useState(false);
     const [statusActiveModal, setStatusActiveModal] = useState(false);
 
-    return (
-        <div className={styles.bar}>
-            <div className={styles.barNegative}></div>
-            <div className={styles.barStable}></div>
-            <div className={styles.barPositive}></div>
-
-            <button onClick={() => {
-                setStatusInfoActive(true);
-                setStatusActiveModal(!statusActiveModal);
-            }}>
-                <img src={info} alt="Informações"/>
-            </button>
-
+    function boxMenu() {
+        return (
             <div className={styles.accountMenuContainer}>
                 <div className={styles.accountMenu}>
                     <div className={styles.accountMenuButton} onClick={() => setMenu(!menu)}>
@@ -54,6 +48,29 @@ export default function BarStatus() {
                     </div>
                 </div>
             </div>
+        )
+    }
+
+    return (
+        <div className={styles.bar}>
+            <div className={styles.barNegative}>
+                { statusNumber < 30 && boxMenu()}
+            </div>
+            
+            <div className={styles.barStable}>
+                { statusNumber > 30 && statusNumber <= 79 && boxMenu()}
+            </div>
+            
+            <div className={styles.barPositive}>
+                { statusNumber >= 80 && boxMenu()}
+            </div>
+
+            <button onClick={() => {
+                setStatusInfoActive(true);
+                setStatusActiveModal(!statusActiveModal);
+            }}>
+                <img src={info} alt="Informações"/>
+            </button>
 
             <ModalInfo 
                 active={statusInfoActive} 

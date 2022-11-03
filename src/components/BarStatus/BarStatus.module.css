@@ -37,11 +37,21 @@
     border-radius: 24px 0 0 24px;
 }
 
+.barNegative .accountMenuContainer {
+    right: unset;
+    left: 60px;
+}
+
 .barStable {
     content: "";
     width: 20%;
     height: 100%;
     background-color: #FAA924;
+}
+
+.barStable .accountMenuContainer {
+    right: unset;
+    left: unset;
 }
 
 .barPositive {
@@ -55,7 +65,18 @@
 .accountMenuContainer {
     position: absolute;
     right: 20px;
-    top: 8px;
+    bottom: -48px;
+}
+
+.accountMenuContainer::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #2703A5;
+    position: absolute;
+    top: -4px;
+    left: 10px;
+    transform: rotate(45deg);
 }
 
 .accountMenu {
@@ -166,8 +187,21 @@
         cursor: pointer;
     }
 
+    .barStable,
+    .barNegative {
+        position: relative;
+    }
+
+    .barStable .accountMenuContainer {
+        left: 30px;
+    }
+
     .accountMenuContainer {
         top: 40px;
+    }
+    
+    .accountMenuContainer::before {
+        display: none;
     }
 
     .accountMenuLinks {

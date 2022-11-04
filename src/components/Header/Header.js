@@ -36,19 +36,19 @@ export default function Header() {
 
                 <div className={`${styles.menuContentMobile} ${menu && styles.menuContentMobileActive}`}>
                     <div className={styles.menuContentMobileLinks}>
-                        <Link to={"/reports"}>
+                        <Link to={"/reports"} onClick={() => setMenu(false)}>
                             <img src={registers} alt="Meus Relatórios" />
                             Meus relatórios
                         </Link>
-                        <Link to={"/configs"}>
+                        <Link to={"/configs"} onClick={() => setMenu(false)}>
                             <img src={config} alt="Configurações" />
                             Configurações
                         </Link>
-                        <Link to={"/change-plan"}>
+                        <Link to={"/change-plan"} onClick={() => setMenu(false)}>
                             <img src={changePlan} alt="Alterar plano" /> 
                             alterar plano   
                         </Link>
-                        <div className={styles.logout}>
+                        <div className={styles.logout} onClick={() => setMenu(false)}>
                             <img src={logout} alt="Sair" />
                             Sair
                         </div>

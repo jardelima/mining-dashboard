@@ -20,7 +20,7 @@ export default function BoxAccount() {
                     <p><span>Olá</span> Nome do usuário</p>
                 </div>
 
-                <button className={styles.accountMy}>minha conta</button>
+                <Link to={"/configs"} className={styles.accountMy}>minha conta</Link>
             </div>
 
             <div className={styles.accountColumn}>
@@ -34,7 +34,7 @@ export default function BoxAccount() {
                             <img src={registers} alt="Meus Relatórios" />
                             Meus relatórios
                         </Link>
-                        <Link to={"/config"}>
+                        <Link to={"/configs"}>
                             <img src={config} alt="Configurações" />
                             Configurações
                         </Link>

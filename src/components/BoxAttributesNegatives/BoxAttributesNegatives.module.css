@@ -167,4 +167,16 @@
     .attributesFooter > a {
         margin-bottom: 0;
     }
+
+    .attributesGraphic::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .attributesGraphic::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    
+    .attributesGraphic::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
 }

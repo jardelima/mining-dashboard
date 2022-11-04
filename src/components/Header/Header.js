@@ -36,7 +36,7 @@ export default function Header() {
 
                 <div className={`${styles.menuContentMobile} ${menu && styles.menuContentMobileActive}`}>
                     <div className={styles.menuContentMobileLinks}>
-                        <Link to={"/registers"}>
+                        <Link to={"/reports"}>
                             <img src={registers} alt="Meus Relatórios" />
                             Meus relatórios
                         </Link>

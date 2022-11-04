@@ -80,10 +80,12 @@
     .reportsHeader {
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-end;
     }
 
     .reportsHeader h2 {
         margin-bottom: 0;
+        font-size: 60px;
     }
 
     .reportsHeader button {

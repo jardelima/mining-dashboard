@@ -9,9 +9,6 @@ import {
     AreaChart,
     Tooltip,
     Area,
-    XAxis,
-    YAxis,
-    CartesianGrid
 } from "recharts";
 
 export default function BoxArea() {

@@ -28,7 +28,7 @@ export default function BoxBarsGenders() {
     ];
 
     useEffect(() => {
-        setSingleGenders(window.location.href.split("/")[3] === "genders");
+        setSingleGenders(window.location.href.split("/")[4] === "genders");
     }, []);
 
     const desktopBarFeminine = {
@@ -123,7 +123,12 @@ export default function BoxBarsGenders() {
     }
 
     return (
-        <div className={styles.boxBars}>
+        <div 
+            className={styles.boxBars} 
+            style={{ 
+                height: `${singleGenders && "100%"}`,
+            }}
+        >
             <div className={styles.boxBarsHeader}>
                 <h3 style={{fontSize: `${singleGenders && window.innerWidth > 1200 && 42}px`}}>Gênero do Público</h3>
 
@@ -172,7 +177,7 @@ export default function BoxBarsGenders() {
                 }
 
                 {!singleGenders && 
-                    <Link to={"/genders"} className={styles.graphicButton}>
+                    <Link to={"/genders/graphic-genders"} className={styles.graphicButton}>
                         GRÁFICO COMPLETO
                         <img src={arrow} alt="Gráficos completos" /> 
                     </Link>

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./App.css";
 
 // Components
@@ -17,7 +17,7 @@ import UserProvider from "./context/User";
 function App() {
     return (
         <div>
-            <BrowserRouter>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <Header />
                     <UserProvider>
                         <RoutesPages />

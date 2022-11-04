@@ -86,6 +86,10 @@
     .lastReportsContainer > div {
         margin-bottom: 30px;
     }
+
+    .lastReportsContainer > div:last-of-type {
+        margin-bottom: 200px;
+    }
 }
 
 @media (min-width: 1500px) {

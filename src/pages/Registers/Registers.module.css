@@ -82,6 +82,10 @@
     .lastReportsContainer::-webkit-scrollbar-thumb {
         background: transparent;
     }
+
+    .lastReportsContainer > div {
+        margin-bottom: 30px;
+    }
 }
 
 @media (min-width: 1500px) {

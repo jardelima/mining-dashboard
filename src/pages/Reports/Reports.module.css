@@ -1,5 +1,5 @@
 .container {
-
+    padding: 0 0 4rem;
 }
 
 .reports {
@@ -74,6 +74,7 @@
 @media (min-width: 600px) {
     .reports {
         max-width: unset;
+        padding: 0;
     }
 
     .reportsHeader {

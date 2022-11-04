@@ -67,7 +67,7 @@
     max-width: 285px;
     background-color: #fff;
     bottom: 95px;
-    left: 0;
+    left: 10px;
     border-radius: 6px;
     opacity: 0;
     transform: translateY(10px);
@@ -88,7 +88,7 @@
     background-color: #fff;
     position: absolute;
     bottom: -5px;
-    left: 50px;
+    left: 40px;
     transform: rotate(45deg);
 }
 

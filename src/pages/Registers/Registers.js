@@ -39,7 +39,7 @@ export default function Registers() {
             <div className={styles.lastReports}>
                 <h2>Últimos relatórios</h2>
 
-                <div className={styles.lastReportsContainer} style={{height: `${window.innerHeight - 120}px`}}>
+                <div className={styles.lastReportsContainer} style={{height: `${window.innerWidth > 1200 && window.innerHeight - 120}px`}}>
                     <BoxInfo 
                         isCountdown={false}
                         buttonsActive={true}

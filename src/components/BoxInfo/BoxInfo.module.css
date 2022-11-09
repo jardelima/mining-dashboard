@@ -3,7 +3,7 @@
     width: 100%;
     max-width: 600px;
     margin: 0 auto 60px;
-    padding: 4rem 2rem;
+    padding: 4rem 1.2rem;
     border-radius: 10px;
     background: linear-gradient(0deg, #FFFFFF 13.36%, rgba(23, 55, 161, 0.801) 121.42%);
 }
@@ -39,25 +39,30 @@
 
 .infoButtons {
     display: grid;
-    grid-template-columns: 144px 122px;
+    grid-template-columns: 160px 1fr;
     grid-column-gap: 10px;
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
 }
 
-.infoButtons button {
+.infoButtons button,
+.infoButtons a {
     width: 100%;
     max-width: max-content;
     transition: 400ms;
+    font-family: "Lexend Deca";
+    font-size: 10px;
+    font-weight: 500;
 }
 
-.infoButtons button:hover {
+.infoButtons button:hover,
+.infoButtons a:hover {
     cursor: pointer;
     filter: brightness(0.9);
 }
 
-.infoButtons button:first-of-type {
+.infoButtons button {
     padding: 0.5rem;
     background-color: #2703A5;
     color: #fff;
@@ -71,13 +76,13 @@
     justify-content: center;
 }
 
-.infoButtons button:first-of-type img {
+.infoButtons button img {
     display: inline-block;
     object-fit: contain;
     margin-left: 8px;
 }
 
-.infoButtons button:last-of-type {
+.infoButtons a {
     padding: 0.5rem;
     background-color: #fff;
     color: #2703A5;
@@ -91,7 +96,7 @@
     justify-content: center;
 }
 
-.infoButtons button:last-of-type img {
+.infoButtons a img {
     display: inline-block;
     object-fit: contain;
     margin-left: 8px;

@@ -19,7 +19,7 @@ export default function SingleGraphicGenders() {
             <div className={styles.boxBarsHeader}>
                 <h3>Gênero do Público <span>/Registro</span></h3>
 
-                <Link to={"/genders"}>
+                <Link to={"/registers"}>
                     <img src={exit} alt="Sair" />
                 </Link>
             </div>
@@ -29,7 +29,7 @@ export default function SingleGraphicGenders() {
             {window.innerWidth < 1200 && <p>Arraste para visualizar o gráfico</p>}
 
             <div className={styles.boxBarsFooter}>
-                <Link to={"/registers"} className={styles.registerButton}>
+                <Link to={"/genders"} className={styles.registerButton}>
                     ver registro
                     <img src={register} alt="Registros" />
                 </Link>

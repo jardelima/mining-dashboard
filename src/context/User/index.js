@@ -3,8 +3,8 @@ import React, { createContext, useState } from "react";
 export const User = createContext();
 
 export default function UserProvider({ children }) {
-    const [isFirstLogin, setIsFirstLogin] = useState(true);
-    const [modalWelcome, setModalWelcome] = useState(true);
+    const [isFirstLogin, setIsFirstLogin] = useState(false);
+    const [modalWelcome, setModalWelcome] = useState(false);
     const [statusNumber, setStatusNumber] = useState(84);
 
     return (

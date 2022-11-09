@@ -19,7 +19,7 @@ export default function BoxAttributes() {
             <div className={styles.attributesHeader}>
                 <h3>Atributos Positivos</h3>
 
-                <Link to={"/registers"}>
+                <Link to={"/registers/positives-attributes"}>
                     <img src={exit} alt="Sair" />
                 </Link>
             </div>
@@ -29,7 +29,7 @@ export default function BoxAttributes() {
             </div>
 
             <div className={styles.attributesFooter}>
-                <Link to={"/registers/positives-attributes"}>
+                <Link to={"/registers"}>
                     ver registro
                     <img src={register} alt="Ver registro" />
                 </Link>

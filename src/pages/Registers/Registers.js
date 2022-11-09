@@ -19,19 +19,19 @@ export default function Registers() {
                     <BoxRegisters 
                         titleBox={"Gênero do público"}
                         titleModal={"Gênero do público"}
-                        linkTo={"/genders"}
+                        linkTo={"/genders/graphic-genders"}
                     />
 
                     <BoxRegisters 
                         titleBox={"Atributos positivos"}
                         titleModal={"Atributos positivos"}
-                        linkTo={"/positives-attributes"}
+                        linkTo={"/registers/positives-attributes"}
                     />
 
                     <BoxRegisters 
                         titleBox={"Atributos negativos"}
                         titleModal={"Atributos negativos"}
-                        linkTo={"/negatives-attributes"}
+                        linkTo={"/registers/negatives-attributes"}
                     />
                 </div>
             </div>

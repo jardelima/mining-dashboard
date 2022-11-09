@@ -47,6 +47,7 @@
     .registers h2 {
         font-size: 60px;
         margin: 5px 0 70px;
+        color: #2703A5;
     }
 
     .registersContainer {

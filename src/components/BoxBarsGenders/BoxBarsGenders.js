@@ -144,7 +144,7 @@ export default function BoxBarsGenders() {
                 }
 
                 {singleGenders && 
-                    <Link to={"/registers"}>
+                    <Link to={"/genders/graphic-genders"}>
                         <img src={exit} alt="Sair" />
                     </Link>
                 }

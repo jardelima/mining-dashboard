@@ -65,7 +65,7 @@ export default function Header() {
                         </div>
 
                         <div className={`${notificationActive && styles.notification}  ${!messageActive && styles.notificationDefault}`}>
-                            <Link to={"/notification"}>
+                            <Link onClick={() => setMessageActive(true)}>
                                 <img src={bell} alt="Notificações" />
                             </Link>
 
@@ -120,7 +120,7 @@ export default function Header() {
 
                 <div className={styles.notificationButtons}>
                     <Link 
-                        to={"/"} 
+                        to={"/reports"} 
                         onClick={() => {
                             setMessageActive(false);
                             setNotificationActive(false);

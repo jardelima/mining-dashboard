@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import styles from "./BoxInfo.module.css";
 import Countdown from "../Countdown/Countdown";
 import ModalInfo from "../ModalInfo/ModalInfo";
+import { Link } from "react-router-dom";
 
 // Images
 import loader from "../../assets/images/loader.svg";
@@ -79,10 +80,10 @@ export default function BoxInfo(props) {
                         <img src={cloud} alt="Baixar relatórios"/>
                     </button>
 
-                    <button>
+                    <Link to={"/registers"}>
                         ver registro
                         <img src={registers} alt="Ver registros"/>
-                    </button>
+                    </Link>
                 </div>
             }
 

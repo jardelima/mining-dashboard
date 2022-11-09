@@ -18,7 +18,7 @@ export default function Footer() {
             <footer className={styles.footerContainer}>
                 <div className={styles.footerItems}>
                     <div className={`${notificationActive && styles.notification} ${messageActive && styles.notificationDefault}`}>
-                        <Link to={"/notification"}>
+                        <Link onClick={() => setMessageActive(true)}>
                             <img src={bell} alt="Notificações" />
                         </Link>
                     </div>
@@ -45,7 +45,7 @@ export default function Footer() {
         
                     <div className={styles.notificationButtons}>
                         <Link 
-                            to={"/"} 
+                            to={"/reports"} 
                             onClick={() => {
                                 setMessageActive(false);
                                 setNotificationActive(false);

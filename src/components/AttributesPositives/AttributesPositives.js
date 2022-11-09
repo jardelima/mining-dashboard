@@ -20,7 +20,7 @@ export default function AttributesPositives() {
             <div className={styles.attributesHeader}>
                 <h3>Atributos Positivos <span>/Registro</span></h3>
 
-                <Link to={"/positives-attributes"}>
+                <Link to={"/registers"}>
                     <img src={exit} alt="Sair" />
                 </Link>
             </div>
@@ -98,7 +98,7 @@ export default function AttributesPositives() {
             }
 
             <div className={styles.attributesFooter}>
-                <Link to={"/registers"}>
+                <Link to={"/positives-attributes"}>
                     ver registro
                     <img src={register} alt="Ver registro" />
                 </Link>

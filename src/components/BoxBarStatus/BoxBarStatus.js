@@ -123,7 +123,7 @@ export default function BoxBarStatus() {
                 <button>Compartilhar</button>
             </div>
 
-            <Link to={"/registers"}>
+            <Link to={"/"}>
                 <img src={exit} alt="Sair" />
             </Link>
 

@@ -1,7 +1,7 @@
 .boxGraphicDefault {
     width: 100%;
     background: linear-gradient(0deg, #FFFFFF 13.36%, rgba(23, 55, 161, 0.801) 121.42%);
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 6px;
     position: relative;
     width: 100%;
@@ -24,8 +24,8 @@
 
 .boxHeader button {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 12px;
+    right: 12px;
     background-color: #2703A5;
     padding: 0.4rem;
     display: flex;
@@ -79,7 +79,7 @@
     border-radius: 4px;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 10px;
     color: #2703A5;
     margin-right: 8px;
     font-family: "Lexend Deca";
@@ -87,8 +87,8 @@
 
 .boxFooter a img {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
     object-fit: contain;
     margin-left: 8px;
 }
@@ -103,7 +103,7 @@
     border-radius: 4px;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 10px;
     color: #fff;
     font-family: "Lexend Deca";
 }
@@ -123,5 +123,43 @@
 
     .boxGraphic img {
         height: 224px;
+    }
+
+    .boxFooter a:first-of-type {
+        font-size: 9px;
+    }
+    
+    .boxFooter a img {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .boxFooter a:last-of-type {
+        font-size: 9px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .boxFooter a:first-of-type {
+        font-size: 10px;
+    }
+    
+    .boxFooter a:last-of-type {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .boxFooter a:first-of-type {
+        font-size: 12px;
+    }
+    
+    .boxFooter a:last-of-type {
+        font-size: 12px;
+    }
+
+    .boxFooter a img {
+        width: 18px;
+        height: 18px;
     }
 }

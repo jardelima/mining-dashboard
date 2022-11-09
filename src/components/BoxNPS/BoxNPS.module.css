@@ -11,6 +11,39 @@
     border: none;
     border-radius: 8px;
     background: linear-gradient(360deg, #FFFFFF 5.12%, rgba(160, 241, 242, 0) 122.67%);
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.boxNPS.positive::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, #A0F1F2 0%, rgba(160, 241, 242, 0) 100%);
+    position: absolute;
+    bottom: -90px;
+    right: -185px;
+}
+
+.boxNPS.stable::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, #f5bc62 0%, rgba(160, 241, 242, 0) 100%);
+    position: absolute;
+    bottom: -90px;
+    right: -185px;
+}
+
+.boxNPS.negative::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, #fd8787 0%, rgba(160, 241, 242, 0) 100%);
+    position: absolute;
+    bottom: -90px;
+    right: -185px;
 }
 
 .boxNPS  > p {
@@ -25,7 +58,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: row-reverse;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .score p {
@@ -76,8 +109,20 @@
         height: 242px;
     }
 
+    .boxNPS.positive::before {
+        right: -125px;
+    }
+
+    .boxNPS.stable::before {
+        right: -125px;
+    }
+    
+    .boxNPS.negative::before {
+        right: -125px;
+    }
+
     .score {
-        margin-top: 20px;
+        margin-top: 15px;
         flex-direction: column;
     }
 

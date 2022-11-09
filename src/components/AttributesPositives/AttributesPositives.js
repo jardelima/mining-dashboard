@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./AttributesPositives.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ModalInfo from "../ModalInfo/ModalInfo";
 import SlideAttributes from "../SlideAttributes/SlideAttributes";
 
@@ -14,13 +14,14 @@ import register from "../../assets/images/registers-icon.svg";
 export default function AttributesPositives() {
     const [attributesInfoActive, setAttributesInfoActive] = useState(false);
     const [attributesActiveModal, setAttributesActiveModal] = useState(false);
+    const navigate = useNavigate();
 
     return (
         <div className={styles.attributes}>
             <div className={styles.attributesHeader}>
                 <h3>Atributos Positivos <span>/Registro</span></h3>
 
-                <Link to={"/registers"}>
+                <Link onClick={() => navigate(-1)}>
                     <img src={exit} alt="Sair" />
                 </Link>
             </div>
@@ -98,7 +99,7 @@ export default function AttributesPositives() {
             }
 
             <div className={styles.attributesFooter}>
-                <Link to={"/positives-attributes"}>
+                <Link to={"/registers"}>
                     ver registro
                     <img src={register} alt="Ver registro" />
                 </Link>

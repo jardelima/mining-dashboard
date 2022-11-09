@@ -37,7 +37,7 @@ export default function RoutesPages() {
             }   
             <Route path="/configs" element={<Configs />} />
             <Route path="/registers" element={<Registers />} />
-            <Route path="/graphic-nps" element={<SingleNPS />} />
+            <Route path="/registers/nps" element={<SingleNPS />} />
             <Route path="/positives-attributes" element={<SingleBoxAttributesPositives />} />
             <Route path="/registers/positives-attributes" element={<SingleAttributesPositives />} />
             <Route path="/negatives-attributes" element={<SingleBoxAttributesNegatives />} />

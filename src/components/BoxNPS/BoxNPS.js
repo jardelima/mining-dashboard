@@ -25,7 +25,7 @@ export default function BoxNPS() {
     }, [statusNumber]);
 
     return (
-        <div className={styles.boxNPS}>
+        <div className={`${styles.boxNPS} ${(score >= 0 && score <= 30) || score < 0 ? styles.negative : score > 30 && score <= 70 ? styles.stable : score >= 80 && styles.positive}`}>
             <div className={styles.score}>
                 <p>NPS SCORE</p>
                 <h2 style={{ color: scoreColor }}>{score}</h2>

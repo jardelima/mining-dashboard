@@ -23,11 +23,13 @@ export default function Dashboard() {
                     title="Atributos Positivos" 
                     titleModal="Atributos Positivos" 
                     linkGraphic="/positives-attributes"
+                    linkRegister="/registers/positives-attributes"
                 />
                 <BoxGraphicDefault 
                     title="Atributos Negativos" 
                     titleModal="Atributos Negativos"
                     linkGraphic="/negatives-attributes"
+                    linkRegister="/registers/negatives-attributes"
                 />
                 <BoxBarGenders />
             </div>

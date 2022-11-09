@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./BoxAttributesPositives.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ModalInfo from "../ModalInfo/ModalInfo";
 
 // Images
@@ -13,13 +13,14 @@ import register from "../../assets/images/registers-icon.svg";
 export default function BoxAttributes() {
     const [attributesInfoActive, setAttributesInfoActive] = useState(false);
     const [attributesActiveModal, setAttributesActiveModal] = useState(false);
+    const navigate = useNavigate();
 
     return (
         <div className={styles.attributes}>
             <div className={styles.attributesHeader}>
                 <h3>Atributos Positivos</h3>
 
-                <Link to={"/registers/positives-attributes"}>
+                <Link onClick={() => navigate(-1)}>
                     <img src={exit} alt="Sair" />
                 </Link>
             </div>

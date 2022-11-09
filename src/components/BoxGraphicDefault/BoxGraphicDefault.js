@@ -42,13 +42,13 @@ export default function BoxGraphicDefault(props) {
             </div>
 
             <div className={styles.boxFooter}>
-                <Link to={"/registers"}>
+                <Link to={props.linkRegister}>
                     Ver registro
                     <img src={register} alt="Ver registros" />
                 </Link>
 
                 <Link to={props.linkGraphic}>
-                    Ver Gráfico completo
+                    Gráfico completo
                     <img src={arrow} alt="Ver gráfico completo" />
                 </Link>
             </div>

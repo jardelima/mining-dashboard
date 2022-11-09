@@ -13,7 +13,7 @@ export default function Registers() {
                     <BoxRegisters 
                         titleBox={"NPS Score"}
                         titleModal={"NPS Score"}
-                        linkTo={"/graphic-nps"}
+                        linkTo={"/registers/nps"}
                     />
 
                     <BoxRegisters 

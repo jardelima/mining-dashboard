@@ -144,7 +144,7 @@ export default function BoxBarsGenders() {
                 }
 
                 {singleGenders && 
-                    <Link to={"/genders/graphic-genders"}>
+                    <Link to={"/"}>
                         <img src={exit} alt="Sair" />
                     </Link>
                 }
@@ -169,7 +169,7 @@ export default function BoxBarsGenders() {
                             <img src={info} alt="Informações" />
                         </button>
 
-                        <Link to={"/genders/graphic-genders"} className={styles.graphicButton}>
+                        <Link className={styles.graphicButton}>
                             GRÁFICO COMPLETO
                             <img src={arrow} alt="Gráficos completos" /> 
                         </Link>
@@ -177,7 +177,7 @@ export default function BoxBarsGenders() {
                 }
 
                 {!singleGenders && 
-                    <Link to={"/genders/graphic-genders"} className={styles.graphicButton}>
+                    <Link to={"/genders"} className={styles.graphicButton}>
                         GRÁFICO COMPLETO
                         <img src={arrow} alt="Gráficos completos" /> 
                     </Link>

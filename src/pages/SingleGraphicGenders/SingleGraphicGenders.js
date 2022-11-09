@@ -29,7 +29,7 @@ export default function SingleGraphicGenders() {
             {window.innerWidth < 1200 && <p>Arraste para visualizar o gráfico</p>}
 
             <div className={styles.boxBarsFooter}>
-                <Link to={"/genders"} className={styles.registerButton}>
+                <Link to={"/registers"} className={styles.registerButton}>
                     ver registro
                     <img src={register} alt="Registros" />
                 </Link>

@@ -52,7 +52,7 @@ export default function BarStatus() {
     }
 
     return (
-        <div className={styles.bar}>
+        <Link className={styles.bar} to={"/graphic-nps"}>
             <div className={styles.barNegative}>
                 { statusNumber < 30 && boxMenu()}
             </div>
@@ -77,6 +77,6 @@ export default function BarStatus() {
                 activeModal={statusActiveModal} 
                 title={"Status"}
             />
-        </div>
+        </Link>
     )
 }

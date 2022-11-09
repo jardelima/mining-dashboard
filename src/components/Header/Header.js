@@ -65,7 +65,7 @@ export default function Header() {
                         </div>
 
                         <div className={`${notificationActive && styles.notification}  ${!messageActive && styles.notificationDefault}`}>
-                            <Link onClick={() => setMessageActive(true)}>
+                            <Link onClick={() => setMessageActive(!messageActive)}>
                                 <img src={bell} alt="Notificações" />
                             </Link>
 

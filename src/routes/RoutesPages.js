@@ -15,6 +15,7 @@ import SingleBoxAttributesNegatives from "../pages/SingleBoxAttributesNegatives/
 import SingleBoxAttributesPositives from "../pages/SingleBoxAttributesPositives/SingleBoxAttributesPositives";
 import SingleAttributesPositives from "../pages/SingleAttributesPositives/SingleAttributesPositives";
 import SingleAttributesNegatives from "../pages/SingleAttributesNegatives/SingleAttributesNegatives";
+import BoxBarStatus from "../components/BoxBarStatus/BoxBarStatus";
 
 // Routes
 import { 
@@ -35,6 +36,7 @@ export default function RoutesPages() {
                 :
                 <Route path="/" element={<Dashboard />} />
             }   
+            <Route path="/nps" element={<BoxBarStatus />} />
             <Route path="/configs" element={<Configs />} />
             <Route path="/registers" element={<Registers />} />
             <Route path="/registers/nps" element={<SingleNPS />} />

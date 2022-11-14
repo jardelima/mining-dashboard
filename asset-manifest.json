@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mining-dashboard/static/css/main.c5c2d3a4.css",
-    "main.js": "/mining-dashboard/static/js/main.22bb8439.js",
+    "main.css": "/mining-dashboard/static/css/main.ef50d17c.css",
+    "main.js": "/mining-dashboard/static/js/main.df108284.js",
     "static/media/photo-materials.png": "/mining-dashboard/static/media/photo-materials.a4e9b7cf46288554d2c2.png",
     "static/media/lorem-graphic.png": "/mining-dashboard/static/media/lorem-graphic.921f242b699165a7eee2.png",
     "static/media/bg-modal-welcome.png": "/mining-dashboard/static/media/bg-modal-welcome.085efe20169277ad860b.png",
@@ -24,11 +24,11 @@
     "static/media/reports.svg": "/mining-dashboard/static/media/reports.e6db88f0555463e3d3e8075dcc3e6c61.svg",
     "static/media/logout.svg": "/mining-dashboard/static/media/logout.51b1862a8dd8e09706648b533c6d9536.svg",
     "static/media/exit.svg": "/mining-dashboard/static/media/exit.cf09ab4c1423251a11d892c2fbe1f2a9.svg",
-    "main.c5c2d3a4.css.map": "/mining-dashboard/static/css/main.c5c2d3a4.css.map",
-    "main.22bb8439.js.map": "/mining-dashboard/static/js/main.22bb8439.js.map"
+    "main.ef50d17c.css.map": "/mining-dashboard/static/css/main.ef50d17c.css.map",
+    "main.df108284.js.map": "/mining-dashboard/static/js/main.df108284.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5c2d3a4.css",
-    "static/js/main.22bb8439.js"
+    "static/css/main.ef50d17c.css",
+    "static/js/main.df108284.js"
   ]
 }

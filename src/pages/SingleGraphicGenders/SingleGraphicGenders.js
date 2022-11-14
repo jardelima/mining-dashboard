@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./SingleGraphicGenders.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ModalInfo from "../../components/ModalInfo/ModalInfo";
 import GraphicGenders from "../../components/GraphicGenders/GraphicGenders";
 
@@ -13,13 +13,14 @@ import exit from "../../assets/images/exit.svg";
 export default function SingleGraphicGenders() {
     const [barsInfoActive, setBarsInfoActive] = useState(false);
     const [barsActiveModal, setBarsActiveModal] = useState(false);
+    const navigate = useNavigate();
 
     return (
         <div className={styles.boxBars}>
             <div className={styles.boxBarsHeader}>
                 <h3>Gênero do Público <span>/Registro</span></h3>
 
-                <Link to={"/registers"}>
+                <Link onClick={() => navigate(-1)}>
                     <img src={exit} alt="Sair" />
                 </Link>
             </div>

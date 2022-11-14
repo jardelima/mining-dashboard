@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./SingleNPS.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ModalInfo from "../../components/ModalInfo/ModalInfo";
 import GraphicNPS from "../../components/GraphicNPS/GraphicNPS";
 
@@ -13,13 +13,14 @@ import exit from "../../assets/images/exit.svg";
 export default function SingleNPS() {
     const [npsInfoActive, setNPSInfoActive] = useState(false);
     const [npsActiveModal, setNPSActiveModal] = useState(false);
+    const navigate = useNavigate();
 
     return (
         <div className={styles.boxBars}>
             <div className={styles.boxBarsHeader}>
                 <h3>NPS Score <span>/Registro</span></h3>
 
-                <Link to={"/registers"}>
+                <Link onClick={() => navigate(-1)}>
                     <img src={exit} alt="Sair" />
                 </Link>
             </div>

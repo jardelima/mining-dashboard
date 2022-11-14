@@ -52,7 +52,7 @@ export default function BarStatus() {
     }
 
     return (
-        <Link className={styles.bar} to={"/graphic-nps"}>
+        <Link className={styles.bar} to={"/registers/nps"}>
             <div className={styles.barNegative}>
                 { statusNumber < 30 && boxMenu()}
             </div>

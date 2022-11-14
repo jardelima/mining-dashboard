@@ -153,7 +153,7 @@ export default function BoxBarsGenders() {
             {getValues()}
 
             <div className={styles.boxBarsFooter}>
-                <Link to={"/registers"} className={styles.registerButton}>
+                <Link to={"/genders/graphic-genders"} className={styles.registerButton}>
                     ver registro
                     <img src={register} alt="Registros" />
                 </Link>

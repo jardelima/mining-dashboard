@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import styles from "./BarStatus.module.css";
 import { Link } from "react-router-dom";
 import ModalInfo from "../ModalInfo/ModalInfo";
@@ -19,6 +19,16 @@ export default function BarStatus() {
     const [menu, setMenu] = useState(false);
     const [statusInfoActive, setStatusInfoActive] = useState(false);
     const [statusActiveModal, setStatusActiveModal] = useState(false);
+
+    const [valueNegative, setValueNegative] = useState(0);
+    const [valueStable, setValueStable] = useState(0);
+    const [valuePositive, setValuePositive] = useState(0);
+
+    useEffect(() => {
+        setValueNegative((30 * 100) + "px");
+        setValueStable((30 * 100) + "px");
+        setValuePositive((50 * 100) + "px");
+    });
 
     function boxMenu() {
         return (
@@ -53,15 +63,15 @@ export default function BarStatus() {
 
     return (
         <Link className={styles.bar} to={"/nps"}>
-            <div className={styles.barNegative}>
+            <div className={styles.barNegative} style={{ width: valueNegative }}>
                 { statusNumber < 30 && boxMenu()}
             </div>
             
-            <div className={styles.barStable}>
+            <div className={styles.barStable} style={{ width: valueStable }}>
                 { statusNumber > 30 && statusNumber <= 79 && boxMenu()}
             </div>
             
-            <div className={styles.barPositive}>
+            <div className={styles.barPositive} style={{ width: valuePositive }}>
                 { statusNumber >= 80 && boxMenu()}
             </div>
 

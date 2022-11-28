@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./BoxBarStatus.module.css";
 import { Link } from "react-router-dom";
 import ModalInfo from "../ModalInfo/ModalInfo";
@@ -17,11 +17,27 @@ export default function BoxBarStatus() {
     const [statusActiveModal, setStatusActiveModal] = useState(false);
     const [menu, setMenu] = useState(false);
 
+    const [valueNegative, setValueNegative] = useState(0);
+    const [valueStable, setValueStable] = useState(0);
+    const [valuePositive, setValuePositive] = useState(0);
+
+    useEffect(() => {
+        setValueNegative(10 * 100);
+        setValueStable(30 * 100);
+        setValuePositive(50 * 100);
+    });
+
     return (
         <div className={styles.boxBarStatus}>
-            <div className={styles.barNegative}>
+            <div 
+                className={styles.barNegative} 
+                style={{ 
+                    height: `${window.innerWidth < 1200 ? (valueNegative + "px") : "100%"}`,
+                    width: `${window.innerWidth > 1200 ? (valueNegative + "px") : "100%"}`,
+                }}
+            >
                 <h3>DETRATORES</h3>
-                <p>0000</p>
+                <p>{valueNegative}</p>
 
                 {status < 30 &&
                     <div className={styles.accountMenuContainer}>
@@ -50,9 +66,15 @@ export default function BoxBarStatus() {
                 }
             </div>
 
-            <div className={styles.barStable}>
+            <div 
+                className={styles.barStable} 
+                style={{ 
+                    height: `${window.innerWidth < 1200 ? (valueStable + "px") : "100%"}`,
+                    width: `${window.innerWidth > 1200 ? (valueStable + "px") : "100%"}`,
+                }}
+            >
                 <h3>NEUTROS</h3>
-                <p>0000</p>
+                <p>{valueStable}</p>
 
                 {status >= 30 && status <= 50 &&
                     <div className={styles.accountMenuContainer}>
@@ -81,9 +103,15 @@ export default function BoxBarStatus() {
                 }
             </div>
 
-            <div className={styles.barPositive}>
+            <div 
+                className={styles.barPositive} 
+                style={{ 
+                    height: `${window.innerWidth < 1200 ? (valuePositive + "px") : "100%"}`,
+                    width: `${window.innerWidth > 1200 ? (valuePositive + "px") : "100%"}`,
+                }}
+            >
                 <h3>Promotores</h3>
-                <p>0000</p>
+                <p>{valuePositive}</p>
 
                 {status >= 51 &&
                     <div className={styles.accountMenuContainer}>

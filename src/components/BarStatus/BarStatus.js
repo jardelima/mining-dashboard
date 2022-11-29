@@ -25,7 +25,7 @@ export default function BarStatus() {
     const [valuePositive, setValuePositive] = useState(0);
 
     useEffect(() => {
-        setValueNegative((30 * 100) + "px");
+        setValueNegative((20 * 100) + "px");
         setValueStable((30 * 100) + "px");
         setValuePositive((50 * 100) + "px");
     });
@@ -62,7 +62,7 @@ export default function BarStatus() {
     }
 
     return (
-        <Link className={styles.bar} to={"/nps"}>
+        <div className={styles.bar} >
             <div className={styles.barNegative} style={{ width: valueNegative }}>
                 { statusNumber < 30 && boxMenu()}
             </div>
@@ -87,6 +87,8 @@ export default function BarStatus() {
                 activeModal={statusActiveModal} 
                 title={"Status"}
             />
-        </Link>
+
+            <Link to={"/nps"} />
+        </div>
     )
 }

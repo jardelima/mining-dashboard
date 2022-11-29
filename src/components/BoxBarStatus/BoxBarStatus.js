@@ -22,7 +22,7 @@ export default function BoxBarStatus() {
     const [valuePositive, setValuePositive] = useState(0);
 
     useEffect(() => {
-        setValueNegative(10 * 100);
+        setValueNegative(20 * 100);
         setValueStable(30 * 100);
         setValuePositive(50 * 100);
     });

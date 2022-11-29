@@ -17,7 +17,7 @@ import UserProvider from "./context/User";
 function App() {
     return (
         <div>
-            <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <BrowserRouter>
                 <Header />
                     <UserProvider>
                         <RoutesPages />

@@ -28,7 +28,8 @@ export default function BoxBarsGenders() {
     ];
 
     useEffect(() => {
-        setSingleGenders(window.location.href.split("/")[4] === "genders");
+        // setSingleGenders(window.location.href.split("/")[4] === "genders");
+        setSingleGenders(window.location.href.split("/")[3] === "genders");
     }, []);
 
     const desktopBarFeminine = {

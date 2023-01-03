@@ -64,16 +64,6 @@ export default function Header() {
                             </Link>
                         </div>
 
-                        <div className={`${notificationActive && styles.notification}  ${!messageActive && styles.notificationDefault}`}>
-                            <Link onClick={() => setMessageActive(!messageActive)}>
-                                <img src={bell} alt="Notificações" />
-                            </Link>
-
-                            <div className={styles.menuHover}>
-                                <p>Notificações</p>
-                            </div>
-                        </div>
-
                         <div className={styles.menuItem}>
                             <Link to={"/reports"}>
                                 <img src={reports} alt="Relatórios" />
@@ -105,8 +95,20 @@ export default function Header() {
                         </div>
                     </div>
 
-                    <div className={styles.menuItem}>
-                        <img src={logout} alt="Logout" />
+                    <div>
+                        <div className={`${notificationActive && styles.notification}  ${!messageActive && styles.notificationDefault}`}>
+                            <Link onClick={() => setMessageActive(!messageActive)}>
+                                <img src={bell} alt="Notificações" />
+                            </Link>
+
+                            <div className={styles.menuHover}>
+                                <p>Notificações</p>
+                            </div>
+                        </div>
+
+                        <div className={styles.menuItem}>
+                            <img src={logout} alt="Logout" />
+                        </div>
                     </div>
                 </div>
             </header>

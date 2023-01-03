@@ -71,6 +71,142 @@
     margin-right: 30px;
 }
 
+.modalContainer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: 400ms;
+    pointer-events: initial;
+}
+
+.modalContainer.modalDisabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modalBox {
+    background-color: #fff;
+    border-radius: 6px;
+    width: 90%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 305;
+}
+
+.modalTitle {
+    background-image: url("../../assets/images/bg-modal-welcome.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem;
+    border-radius: 6px 6px 0 0;
+}
+
+.modalTitle h2 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.modalContent {
+    padding: 2rem;
+}
+
+.modalContent p {
+    font-weight: 500;
+    font-size: 16px;
+    color: #747474;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+
+.modalButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modalButtons button {
+    width: 100%;
+    padding: 0.4rem;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 400ms;
+}
+
+.modalButtons button:first-of-type {
+    background-color: #fff;
+    border: 1px solid #2703A5;
+    color: #2703A5;
+    margin-bottom: 10px;
+}
+
+.modalButtons button:first-of-type:hover {
+    background-color: #2703A5;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modalButtons button:last-of-type {
+    background-color: #2703A5;
+    color: #fff;
+    border: 1px solid #2703A5;
+}
+
+.modalButtons button:last-of-type:hover {
+    filter: brightness(0.9);
+    cursor: pointer;
+}
+
+.modalClose {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 304;
+}
+
+.modalFooter {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 24px auto;
+    grid-column-gap: 20px;
+    align-items: center;
+}
+
+.modalFooter p {
+    color: #747474;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.modalFooter img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+
 @media (min-width: 600px) {
     .reports {
         max-width: unset;
@@ -96,5 +232,76 @@
 
     .reportsContainer {
         padding-bottom: 3rem;
+    }
+
+    .modalButtons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        grid-column-gap: 10px;
+    }
+
+    .modalButtons button:first-of-type {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .modalBox {
+        max-width: 800px;
+    }
+
+    .modalTitle {
+        padding: 4rem 2rem;
+    }
+
+    .modalTitle h2 {
+        font-size: 48px;
+    }
+
+    .modalButtons button {
+        width: 100%;
+        font-size: 20px;
+        text-transform: uppercase;
+        padding: 0.8rem 0;
+    }
+
+    .modalButtons button b {
+        font-size: 22px;
+    }
+
+    .modalButtons button:first-of-type {
+        margin-left: auto;
+    }
+
+    .modalContent p {
+        font-size: 24px;
+        margin: 15px 0 50px;
+    }
+
+    .modalContent {
+        padding: 2rem 4rem;
+    }
+
+    .modalFooter img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .modalFooter p {
+        color: #747474;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .modalFooter {
+        border-top: 1px solid rgba(0,0,0,0.1);
+        padding: 2rem 4rem;
+        display: grid;
+        grid-template-columns: 30px auto;
+        grid-column-gap: 30px;
+        align-items: center;
     }
 }

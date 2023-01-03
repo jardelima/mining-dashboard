@@ -139,6 +139,7 @@
     border-radius: 8px;
     transition: 400ms;
     position: relative;
+    background-color: #fff;
 }
 
 .menuItem a:hover,
@@ -151,10 +152,6 @@
     width: 30px;
     height: 30px;
     object-fit: contain;
-}
-
-.menuItem:hover {
-    background-color: #fff;
 }
 
 .menuItem:hover .menuHover {
@@ -178,6 +175,7 @@
     position: relative;
     border-radius: 6px;
     padding: 10px;
+    margin-bottom: 40px;
     transition: 400ms;
     background-color: #fff;
 }
@@ -189,8 +187,10 @@
     position: relative;
     border-radius: 6px;
     padding: 10px;
+    margin-bottom: 40px;
     transition: 400ms;
     background-color: transparent;
+    background-color: #fff;
 }
 
 .notification a img {
@@ -198,10 +198,6 @@
     width: 30px;
     height: 30px;
     object-fit: contain;
-}
-
-.notificationDefault a:hover {
-    background-color: #fff;
 }
 
 .notificationDefault:hover .menuHover {
@@ -262,7 +258,7 @@
     width: 100%;
     max-width: 425px;
     background-color: #fff;
-    top: 95px;
+    bottom: 55px;
     left: 140px;
     border-radius: 6px;
     z-index: 100;
@@ -284,7 +280,7 @@
     height: 14px;
     background-color: #fff;
     position: absolute;
-    top: 90px;
+    top: 138px;
     left: -4px;
     transform: rotate(45deg);
 }

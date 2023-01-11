@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom"; 
 
 // Images
 import logo from "../../assets/images/logo.png";
@@ -18,6 +18,9 @@ export default function Header() {
     const [menu, setMenu] = useState(false);
     const [notificationActive, setNotificationActive] = useState(true);
     const [messageActive, setMessageActive] = useState(true);
+
+    const location = useLocation();
+    const { pathname } = location;
 
     return (
         <>
@@ -64,7 +67,7 @@ export default function Header() {
                             </Link>
                         </div>
 
-                        <div className={styles.menuItem}>
+                        <div className={`${styles.menuItem} ${pathname === "/reports" && styles.menuItemActive}`}>
                             <Link to={"/reports"}>
                                 <img src={reports} alt="Relatórios" />
                             </Link>
@@ -74,7 +77,7 @@ export default function Header() {
                             </div>
                         </div>
 
-                        <div className={styles.menuItem} >
+                        <div className={`${styles.menuItem} ${pathname === "/registers" && styles.menuItemActive}`}>
                             <Link to={"/registers"}>
                                 <img src={registers} alt="Registros" />
                             </Link>
@@ -84,7 +87,7 @@ export default function Header() {
                             </div>
                         </div>
 
-                        <div className={styles.menuItem}>
+                        <div className={`${styles.menuItem} ${pathname === "/configs" && styles.menuItemActive}`}>
                             <Link to={"/configs"}>
                                 <img src={config} alt="Configurações" />
                             </Link>
@@ -96,8 +99,11 @@ export default function Header() {
                     </div>
 
                     <div>
-                        <div className={`${notificationActive && styles.notification}  ${!messageActive && styles.notificationDefault}`}>
-                            <Link onClick={() => setMessageActive(!messageActive)}>
+                        <div className={`${notificationActive && styles.notification}  ${styles.notificationDefault}`}>
+                            <Link onClick={() => {
+                                    setMessageActive(!messageActive);
+                                }}
+                            >
                                 <img src={bell} alt="Notificações" />
                             </Link>
 

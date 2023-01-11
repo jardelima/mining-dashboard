@@ -139,6 +139,9 @@
     border-radius: 8px;
     transition: 400ms;
     position: relative;
+}
+
+.menuItemActive {
     background-color: #fff;
 }
 
@@ -152,6 +155,10 @@
     width: 30px;
     height: 30px;
     object-fit: contain;
+}
+
+.menuItem:hover {
+    background-color: #fff;
 }
 
 .menuItem:hover .menuHover {
@@ -177,11 +184,12 @@
     padding: 10px;
     margin-bottom: 40px;
     transition: 400ms;
-    background-color: #fff;
 }
 
 .notificationDefault a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
     position: relative;
@@ -190,6 +198,9 @@
     margin-bottom: 40px;
     transition: 400ms;
     background-color: transparent;
+}
+
+.notificationDefault a:hover {
     background-color: #fff;
 }
 
